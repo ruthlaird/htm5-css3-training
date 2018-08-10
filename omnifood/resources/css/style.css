@@ -185,3 +185,50 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 }
+
+/* --------------------------------------- */
+/* FEATURES */
+/* --------------------------------------- */
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------- */
+/* MEALS */
+/* --------------------------------------- */
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none; /* removes bullet point */
+    width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left; /* displays the images side by side */
+    width: 25%  /* each image is 1/4 of the overall width */
+}
+
+.meal-photo {
+    width: 100%; /* is exactly as wide as it's container 'meals-showcase li' */
+    margin: 0; /* to override the built in margin for the figure element */
+    overflow: hidden; /* scaling images below causes them to overflow this container so setting to hidden hides an overflow area */
+    background-color: #000; /* set background colour of container to black */
+}
+
+.meal-photo img {
+    opacity: 0.7; /* 70% opaque - as container is set to black above this will darken the image */
+    width: 100%;
+    height: auto;
+    transform: scale(1.15); /* scale image to 115% */
+    transition: transform 0.5s opacity 0.5s; /* applies animation */
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03); /* shrink image when hover over */
+}
