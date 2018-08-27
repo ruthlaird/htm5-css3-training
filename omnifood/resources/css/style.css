@@ -183,6 +183,7 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    background-attachment: fixed; /* image always stays in the same place when you scroll */
 }
 
 .hero-text-box {
@@ -342,4 +343,45 @@ header {
 
 .city-feature {
     margin-bottom: 5px;
+}
+
+/* --------------------------------------- */
+/* TESTIMONIALS */
+/* --------------------------------------- */
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed; /* image always stays in the same place when you scroll */
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative; /* need this as we're setting position:absolute below so it's parent must have position:relative */
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C"; /* see https://css-tricks.com/snippets/html/glyphs for codes */
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block; /* forces a line break between the blockquote and the cite */
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%; /* makes the image a circle */
+    margin-right: 10px;
+    vertical-align: middle;
 }
